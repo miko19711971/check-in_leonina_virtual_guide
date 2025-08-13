@@ -6,10 +6,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Serve static files (le immagini stanno nella root del repo)
+// Serve static files (images live in the repo root)
 app.use(express.static('.'));
 
-// Pagina unica
+// Single page
 app.get('/', (_req, res) => {
   const html = `<!doctype html>
 <html lang="en">
@@ -52,7 +52,7 @@ app.get('/', (_req, res) => {
       <div class="num">1</div>
       <div>
         <h2>Arriving at the Building</h2>
-        <p>When you reach <b>Via Leonina 71</b>, look for the <b>small wooden doorway</b> with the number <b>71</b> on the wall.</p>
+        <p>When you reach <b>Via Leonina 71</b>, you arrive at your final destination.</p>
         <figure>
           <img src="building-door.jpg" alt="Building entrance — Via Leonina 71">
           <figcaption>Façade and entrance — Via Leonina 71.</figcaption>
@@ -67,8 +67,8 @@ app.get('/', (_req, res) => {
       <div class="num">2</div>
       <div>
         <h2>Using the Intercom / Keypad</h2>
-        <p>At the entrance, press the <b>button 16</b>, <b>then call me</b> at <a class="cta" href="tel:+393355245756">+39 335 524 5756</a>.</p>
-        <p>In alternativa, digita sul tastierino <b>7171</b> e poi il <b>simbolo della chiave</b> per aprire.</p>
+        <p>At the entrance, press <b>button 16</b>, <b>then call me</b> at <a class="cta" href="tel:+393355245756">+39 335 524 5756</a>.</p>
+        <p>Alternatively, enter <b>7171</b> and then press the <b>key symbol</b> on the keypad to open.</p>
       </div>
     </div>
   </section>
@@ -79,11 +79,11 @@ app.get('/', (_req, res) => {
       <div class="num">3</div>
       <div>
         <h2>Inside the Building</h2>
-        <p>Cammina dritto fino in fondo al corridoio: l’ultima porta a destra è l’<b>ascensore</b>.</p>
-        <div class="note">Le porte dell’ascensore sono <b>manuali</b>: aprile e chiudile sempre. Vai al <b>4º piano</b> e attendi che l’ascensore sia fermo al piano prima di aprire le porte.</div>
+        <p>Walk straight to the end of the corridor: the <b>last door on the right</b> is the elevator.</p>
+        <div class="note">The elevator doors are <b>manual</b> — always open and close them yourself. Go to the <b>4th floor</b> and wait until the elevator stops at the floor before opening the doors.</div>
         <figure>
           <img src="elevator-corridor.jpg" alt="Corridor leading to the manual elevator">
-          <figcaption>Fondo corridoio: porta a destra = ascensore manuale.</figcaption>
+          <figcaption>End of corridor — right door is the manual elevator.</figcaption>
         </figure>
       </div>
     </div>
@@ -95,11 +95,11 @@ app.get('/', (_req, res) => {
       <div class="num">4</div>
       <div>
         <h2>Reaching the Apartment</h2>
-        <p>Uscito all’ultimo piano, sulla <b>sinistra</b> troverai la <b>porta verde</b>: è l’ingresso del tuo appartamento.</p>
-        <p>Chiamami quando sei davanti alla porta e <b>la apro io</b>: <a class="cta" href="tel:+393355245756">+39 335 524 5756</a>.</p>
+        <p>At the top floor, on your <b>left</b>, you’ll see the <b>green door</b> — this is your apartment entrance.</p>
+        <p>Call me when you are in front of the door and <b>I will open it for you</b>: <a class="cta" href="tel:+393355245756">+39 335 524 5756</a>.</p>
         <figure>
-          <img src="apartment-door.jpg" alt="Green apartment door at the top floor">
-          <figcaption>Porta verde dell’appartamento — ultimo piano.</figcaption>
+          <img src="apartment-door.jpg" alt="Green apartment door on the top floor">
+          <figcaption>Apartment entrance — green door on the top floor.</figcaption>
         </figure>
       </div>
     </div>
